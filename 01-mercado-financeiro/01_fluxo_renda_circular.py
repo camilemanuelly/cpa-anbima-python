@@ -1,15 +1,17 @@
+ALIQUOTA_IMPOSTO = 0.20
+PROPENSAO_CONSUMO = 0.80
 caixa_empresa = 5000
 caixa_familiar = 0
 caixa_governo = 0
-salario = 1000
+salario_bruto = 1000
 gasto_publico = 300
-imposto = 0.20 * salario
-salario_comDesconto = salario - imposto
-gasto_familiar = 0.80 * salario_comDesconto
+imposto_renda = ALIQUOTA_IMPOSTO * salario_bruto
+salario_liquido = salario_bruto - imposto_renda
+consumo_familiar = PROPENSAO_CONSUMO * salario_liquido
 
 for mes in [1, 2 ,3]:
-    caixa_empresa = caixa_empresa - salario
-    caixa_familiar = caixa_familiar + salario_comDesconto - gasto_familiar
-    caixa_governo = caixa_governo + imposto - gasto_publico
-    caixa_empresa = caixa_empresa + gasto_familiar + gasto_publico
+    caixa_empresa = caixa_empresa - salario_bruto
+    caixa_familiar = caixa_familiar + salario_liquido - consumo_familiar
+    caixa_governo = caixa_governo + imposto_renda - gasto_publico
+    caixa_empresa = caixa_empresa + consumo_familiar + gasto_publico
     print(f"No mês {mes}: | Empresa: {caixa_empresa} | Família: {caixa_familiar} | Governo: {caixa_governo}")
