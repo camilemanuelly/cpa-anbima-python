@@ -7,9 +7,8 @@ A metodologia consiste em transformar cada tema da apostila em desafios prático
 ## Progresso por Módulos
 
 ### `01-mercado-financeiro`
-* **`01_fluxo_renda_circular.py`**: Simulação mensal da circulação de capital entre Famílias, Empresas e Governo, aplicando alíquotas de impostos, propensão ao consumo e gastos públicos.
-  * **Conceitos de Python aplicados:** Variáveis e operações aritméticas, estruturas de repetição (`for`), atualização de estado/acumuladores e formatação de saída com `f-strings`.
-
+* **`01_fluxo_renda_circular.py`**: Simulação mensal da circulação de capital entre Famílias, Empresas e Governo, aplicando alíquotas de impostos, propensão ao consumo e gastos públicos, com classificação automática de cada agente econômico como **Superavitário**, **Deficitário** ou **Neutro** ao fim de cada período.
+  * **Conceitos de Python aplicados:** Boas práticas PEP 8 (`snake_case` e constantes), definição de funções com parâmetros padrão (`def`), estruturas de repetição (`for` com `range`), estruturas condicionais (`if/elif/else`), controle de estado anterior e `f-strings`.
 ---
 
 ## Como executar os scripts
